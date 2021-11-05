@@ -97,7 +97,8 @@ class Markdown {
   }
 
   createAmpImgOrAmpAnim(dimensions, imgNode) {
-    const ampType = dimensions.type === 'gif' ? 'amp-anim' : 'amp-img';
+    const ampType = 'amp-img';
+    // const ampType = dimensions.type === 'gif' ? 'amp-anim' : 'amp-img';
     const ampNode = createElement(ampType, imgNode.attribs);
     // keep height and width if already specified
     ampNode.attribs.width = imgNode.attribs.width || String(dimensions.width);
